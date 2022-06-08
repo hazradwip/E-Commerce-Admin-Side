@@ -237,5 +237,6 @@ class _AddUsersState extends State<AddUsers> {
       'phone': number,
       'uid': uid,
     }).whenComplete(() => notifier('User Added'));
+    Navigator.pop(context);
   }
 }

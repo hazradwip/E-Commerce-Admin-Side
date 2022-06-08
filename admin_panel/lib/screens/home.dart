@@ -1,6 +1,7 @@
 import 'package:admin_panel/screens/add_product.dart';
 import 'package:admin_panel/screens/add_users.dart';
 import 'package:admin_panel/screens/delete_products.dart';
+import 'package:admin_panel/screens/delete_users.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -53,7 +54,12 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DeleteUsers()));
+                },
                 child: Container(
                   height: 50,
                   child: const Center(
